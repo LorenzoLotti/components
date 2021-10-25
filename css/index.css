@@ -1,0 +1,100 @@
+@import 'https://fonts.googleapis.com/css2?family=Inconsolata';
+@import 'sortable-list.css';
+
+:root {
+  --clr-text: white;
+  --clr-lighter: #292C31;
+  --clr-light: #20252A;
+  --clr-dark: #191C21;
+  --clr-borders: #4A4F5A;
+  --heading-height: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inconsolata';
+}
+
+body {
+  margin: 0;
+  color: white;
+  background: var(--clr-dark);
+}
+
+header {
+  padding: calc(2 * var(--heading-height) / 3);
+  box-shadow: 0 0 1rem #000D;
+  background: var(--clr-light);
+}
+
+header img {
+  width: var(--heading-height);
+  border-radius: 50%;
+  box-shadow: 0 .25rem 1.25rem black;
+}
+
+header h1 {
+  display: inline;
+  font-size: var(--heading-height);
+  vertical-align: top;
+  margin: 0 .5rem;
+  background: inherit;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+section:not(:first-child) {
+  padding-top: 2rem;
+  border-top: 1px solid var(--clr-borders);
+}
+
+section > :first-child {
+  text-align: center;
+}
+
+section > div {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+textarea {
+  display: block;
+  white-space: pre-line;
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: .75rem;
+  color: inherit;
+  background: var(--clr-lighter);
+  padding: 1rem;
+  margin: auto;
+  height: 3rem;
+}
+
+a.silent {
+  color: unset;
+  text-decoration: unset;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.hover-prefix {
+  position: relative;
+}
+
+.hover-prefix:hover::before {
+  content: attr(data-prefix);
+  position: absolute;
+  margin-left: -1ch;
+}
+
+@media (min-width: 50ch) {
+  :root {
+    --heading-height: 3rem;
+  }
+}

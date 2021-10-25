@@ -1,0 +1,23 @@
+.sortable-list.custom {
+  overflow: hidden;
+  list-style-type: none;
+  border-radius: 2rem;
+  border: 1px solid var(--clr-borders);
+}
+
+.sortable-list.custom > li {
+  padding: 1.5rem;
+  background: var(--clr-light);
+}
+
+.sortable-list.custom > li:not(.first, .grabbing) {
+  border-top: inherit;
+}
+
+.sortable-list.custom > li.grabbing {
+  background: dodgerblue;
+}
+
+.sortable-list.custom > li.hole {
+  background: var(--clr-borders);
+}
