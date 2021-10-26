@@ -31,4 +31,5 @@
 
 .sortable-list.custom > li.hole {
   background: var(--clr-borders);
+  animation: none;
 }
