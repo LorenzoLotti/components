@@ -1,3 +1,13 @@
+@keyframes drop {
+  from {
+    background: dodgerblue;
+  }
+  
+  to {
+    background: var(--clr-light);
+  }
+}
+
 .sortable-list.custom {
   overflow: hidden;
   list-style-type: none;
@@ -8,6 +18,7 @@
 .sortable-list.custom > li {
   padding: 1.5rem;
   background: var(--clr-light);
+  animation: drop .5s;
 }
 
 .sortable-list.custom > li:not(.first, .grabbing) {
